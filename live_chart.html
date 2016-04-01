@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> </title>
+    <link href="style/site.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="scripts/jquery-1.12.2.min.js"></script>
+    <!-- <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="scripts/excanvas.min.js"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="scripts/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/jquery.flot.time.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/jquery.flot.navigate.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/functionality.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            refresh_tables(0);
+            $("#ddlMinutesInterval").change(ddlMinutesInterval_change);
+        });
+    </script>
+</head>
+
+<body>
+    <article>
+        <section>
+            <div class="container">
+                <div id="placeholder" class="placeholder">
+                </div>
+            </div>
+        </section>
+        <section>
+            <table>
+                <tr>
+                    <td>
+                        <label for="ddlMinutesInterval">Simple Moving Average Period</label>
+                    </td>
+                    <td>
+                        <select id="ddlMinutesInterval">
+                            <option value="0" selected>Please choose Moving Average Period</option>
+                            <option value="5">5 minutes</option>
+                            <option value="10">10 minutes</option>
+                            <option value="15">15 minutes</option>
+                            <option value="30">30 minutes</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+    </article>
+</body>
+
+</html>

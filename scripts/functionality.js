@@ -1,3 +1,4 @@
+// version 1.1
 function refresh_tables() {
     var av_interval = parseInt($("#ddlMinutesInterval option:selected").val());
     var av_interval_text = $("#ddlMinutesInterval option:selected").text();
@@ -75,7 +76,7 @@ function get_sma_data(data, sma_interval, all_minutes) {
         sum_of_current_interval -= points_for_sma_data[i - sma_interval][1];
         sum_of_current_interval += points_for_sma_data[i][1];
         sma_data.push([points_for_sma_data[i][0], sum_of_current_interval / sma_interval]);
-    }
+    } 
 
     return sma_data;
 }
